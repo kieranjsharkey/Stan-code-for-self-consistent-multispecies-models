@@ -16,7 +16,11 @@ This code depends on the following R libraries:
 * posterior
 * bayesplot
 
-STAN needs to be installed (see https://mc-stan.org/install/ for help)
+STAN needs to be installed (see https://mc-stan.org/install/ for help).
+
+Due to a slight but clear anomaly in the early data for AE04, the code below excludes this. The code also excludes all **04 data from the analysis to maintain a balanced design of 7 replicates per initial condition.
+
+All output data is returned as .csv files. Headings are common for STAN. Hierachical parameters have [#] next to their names to associate them to a particular well. Hyperparameters are called [parameter]_mean, or [parameter]_sd as in the .STAN code. 
 
 ### Single Species Models ###
 The MCMC code for single-species models is under Single_species/mc_single_all. Run this as a standard R script and it will automatically cycle through all tagged and untagged data for each model.
@@ -30,9 +34,8 @@ Two species MCMC code is in the "Two_species" directory. There is one code for e
 * Hybrid Richards-Gompertz = GR
 
 The relevant R code is then run mc_[model_name].R. 
-Runtime for all two-species models is upwards of 16 hours, often taking more than 24h to complete. 
+Runtime for all two-species models is upwards of 16 hours, often taking more than 24h to complete.
 
-## Data ##
 
-All output data is returned as .csv files. Headings are common for STAN. Hierachical parameters have [#] next to their names to associate them to a particular well. Hyperparameters are called [parameter]_mean, or [parameter]_sd as in the .STAN code. 
+
 
