@@ -9,14 +9,14 @@ AE01-AE08: 70:30
 AF01-AF08: 0:100
 
 ## Running a model ##
-This code depends on the following R libraries: 
+This code was run on the R platform (version 4.3.2) and depends on the following R libraries: 
 * rlang
 * dplyr
 * cmdstanr
 * posterior
 * bayesplot
 
-STAN needs to be installed (see https://mc-stan.org/install/ for help).
+STAN (version 2.36.0) needs to be installed (see https://mc-stan.org/install/ for help).
 
 Due to a slight but clear anomaly in the early data for AE04, the code below excludes this. The code also excludes all **04 data from the analysis to maintain a balanced design of 7 replicates per initial condition.
 
@@ -35,6 +35,7 @@ Two species MCMC code is in the "Two_species" directory. There is one code for e
 
 The relevant R code is then run mc_[model_name].R. 
 Runtime for all two-species models is upwards of 16 hours, often taking more than 24h to complete.
+
 
 
 
